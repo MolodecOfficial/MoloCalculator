@@ -17,9 +17,9 @@ const calculate = (prev, operator, current) => {
   }
 };
 
-const calcValue = ref('')
+const calcValue = ref(' ')
 const calcButtons =  ['C', '%', '=', '+', 7, 8, 9,'-', 4, 5, 6,'*', 1, 2, 3, '/', 0, '.']
-const calcOperator = ref(null)
+const calcOperator = ref('')
 const calcPrevValue = ref('')
 
 const calcAction = (btn) => {
@@ -78,9 +78,9 @@ const calcAction = (btn) => {
   background-color: #133748;
   display: flex;
   flex-direction: column;
-  width: 15%;
-  height: 44%;
-  gap: 12px;
+  width: clamp(15px, 17vw, 550px);
+  height: clamp(18%, 40vw, 44%);
+  gap: 10px;
   justify-content: center;
   align-items: center;
   border-radius: 30px;
@@ -89,13 +89,16 @@ const calcAction = (btn) => {
   background-color: #094c58;
   color: white;
   font-size: 20px;
+  font-weight: bold;
+  font-family: Poppins, sans-serif;
+  letter-spacing: 2px;
   height: 50px;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 20px;
-  width: 90%;
+  width: clamp(18%, 15vw, 90%);
 }
 .buttons {
   display: grid;
@@ -106,9 +109,9 @@ const calcAction = (btn) => {
   font-weight: bold;
   color: white;
   text-align: center;
-  margin: 0.25rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  margin: clamp(1px, 0.3vw, 5px);
+  padding-top: clamp(1px, 1vw, 15px);
+  padding-bottom: clamp(1px, 1vw, 15px);
   background-color: #2c4d64;
   border-radius: 8px;
   border: none;
@@ -124,9 +127,9 @@ const calcAction = (btn) => {
 }
 
 button {
-  padding: 20px;
-  margin: 2px;
-  font-size: 18px;
+  padding: clamp(1px, 1vw, 20px);
+  margin: clamp(1px, 1vw, 2px);
+  font-size: clamp(5px, 2vw, 20px);
 }
 
 </style>
