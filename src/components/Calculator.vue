@@ -62,8 +62,8 @@ const calcAction = (btn) => {
     <div class="body">
       <div class="value">{{ calcValue }}</div>
       <div class="buttons">
-        <button class="custom-button"
-                :class="{'bg-vue-green': ['C', '*', '/', '+', '-', '=', '%'].includes(btn)}"
+        <button class="blue-button"
+                :class="{'green-button': ['C', '*', '/', '+', '-', '=', '%'].includes(btn)}"
                 v-for="btn in calcButtons"
                 :key="btn"
                 @click="calcAction(btn)">{{ btn }}</button>
@@ -78,12 +78,12 @@ const calcAction = (btn) => {
   background-color: #133748;
   display: flex;
   flex-direction: column;
-  width: clamp(15px, 17vw, 550px);
-  height: clamp(18%, 40vw, 44%);
+  width: clamp(15px, 15vw, 350px);
+  height: clamp(11%, 35vw, 44%);
   gap: 10px;
   justify-content: center;
   align-items: center;
-  border-radius: 30px;
+  border-radius: clamp(5px, 4vw, 30px);
 }
 .value {
   background-color: #094c58;
@@ -92,12 +92,12 @@ const calcAction = (btn) => {
   font-weight: bold;
   font-family: Poppins, sans-serif;
   letter-spacing: 2px;
-  height: 50px;
+  height: clamp(30px, 2vw, 50px);
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 20px;
+  border-radius: clamp(5px, 2vw, 30px);
   width: clamp(18%, 15vw, 90%);
 }
 .buttons {
@@ -105,7 +105,7 @@ const calcAction = (btn) => {
   grid-template-columns: repeat(4, 1fr);
 }
 
-.custom-button {
+.blue-button {
   font-weight: bold;
   color: white;
   text-align: center;
@@ -118,11 +118,11 @@ const calcAction = (btn) => {
   transition: background-color 0.3s;
 }
 
-.custom-button:hover {
+.blue-button:hover {
   background-color: #1c727d;
 }
 
-.bg-vue-green {
+.green-button {
   background-color: #248e3f;
 }
 
