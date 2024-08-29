@@ -125,6 +125,13 @@ const calcAction = (btn) => {
 .green-button {
   background-color: #248e3f;
 }
+.blue-button:active {
+  background-color: #15565f;
+}
+
+.green-button:active {
+  background-color: #1a662e;
+}
 
 button {
   padding: clamp(1px, 1vw, 20px);
